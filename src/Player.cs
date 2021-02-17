@@ -8,7 +8,7 @@ namespace WarO_CSharp_v2
         private readonly IStrategy strategy;
         private readonly PlayerStats playerStats;
         private readonly int maxCard;
-        private readonly Hand hand;
+        private Hand hand;
 
         public Player(string name, IStrategy strategy, int maxCard) :
             this(name, strategy, maxCard, new Hand(), new PlayerStats()) {}
@@ -24,11 +24,20 @@ namespace WarO_CSharp_v2
             this.playerStats = playerStats;
         }
 
+        public void SetHand(Hand hand) {
+            this.hand = hand;
+        }
+
         public PlayerStats GetPlayerStats() { return playerStats; }
         public int GetNumGamesWon() { return playerStats.GetNumGamesWon(); }
         public int GetTotal() { return playerStats.GetTotal(); }
         public String GetName() { return name; }
 
+        public override string ToString()
+        {
+            string result = name + " " + hand.ToString();
+            return result;
+        }
     }
 }
 

@@ -7,10 +7,10 @@ namespace WarO_CSharp_v2
     {
         public void Run(string[] args)
         {
-            Config config = new Config();
-            List<Player> players = config.GetPlayers();
-            Console.WriteLine("TRACER  hello from Runner");
-            Console.WriteLine("TRACER num players: " + players.Count);
+            var config = new Config();
+            var dealer = new Dealer();
+            var table = dealer.Deal(config);
+            Console.WriteLine(table.ToString());
         }
 
         public string CanaryRepeat(string s, int n) {

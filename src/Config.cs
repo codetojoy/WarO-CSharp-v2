@@ -6,7 +6,14 @@ namespace WarO_CSharp_v2
 {
     public class Config
     {
-        private int maxCard = 30;
+        private int maxCard = 16;
+
+        public int GetNumCardsPerHand() {
+            int numPlayers = GetPlayers().Count;
+            int numCardsPerHand = maxCard / (numPlayers + 1);
+            return numCardsPerHand;
+        }
+
         public int GetMaxCard() {
             return maxCard;
         }

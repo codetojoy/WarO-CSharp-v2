@@ -46,5 +46,15 @@ namespace WarO_CSharp_v2
 
             return newHand;
         }
+
+        public override string ToString()
+        {
+            string result = "[ ";
+            foreach (int card in cards) {
+                result += card + " ";
+            }
+            result += "]";
+            return result;
+        }
     }
 }

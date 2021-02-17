@@ -9,10 +9,19 @@ namespace WarO_CSharp_v2
         public Table Deal(Config config) {
             List<Player> players = config.GetPlayers();
             int maxCard = config.GetMaxCard();
+            int numCardsPerHand = config.GetNumCardsPerHand();
+
             Deck deck = new Deck(maxCard);
             List<int> cards = deck.GetCards();
+            List<Hand> hands = Partition(cards, numCardsPerHand);
+            Hand kitty = hands[0];
+            hands.RemoveAt(0);
 
-            Hand kitty = new Hand();
+            for (int index = 0; index < players.Count; index++) {
+                Hand hand = hands[index];
+                players[index].SetHand(hand);
+            }
+
             Table table = new Table(players, kitty);
             return table;
         }

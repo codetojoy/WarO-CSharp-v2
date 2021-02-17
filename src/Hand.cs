@@ -14,10 +14,18 @@ namespace WarO_CSharp_v2
         {
             this.cards = cards;
         }
+        public void Add(int card)
+        {
+            cards.Add(card);
+        }
 
         public bool Contains(int card)
         {
             return cards.Contains(card);
+        }
+
+        public List<int> GetCards() {
+            return cards;
         }
 
         public Hand Select(int card)

@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace tests
+namespace WarO_CSharp_v2
 {
     public class Tests
     {

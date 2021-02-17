@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 using WarO_CSharp_v2;
 
-namespace tests
+namespace WarO_CSharp_v2
 {
     public class RunnerTests
     {

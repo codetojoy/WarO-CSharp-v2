@@ -7,9 +7,11 @@ namespace WarO_CSharp_v2
         static void Main(string[] args)
         {
             Runner runner = new Runner();
-            try {
+            try
+            {
                 runner.Run(args);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

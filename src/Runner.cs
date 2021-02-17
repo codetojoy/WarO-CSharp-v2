@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
 {
@@ -6,7 +7,10 @@ namespace WarO_CSharp_v2
     {
         public void Run(string[] args)
         {
-            Console.WriteLine("TRACER: hello from Runner");
+            Config config = new Config();
+            List<Player> players = config.GetPlayers();
+            Console.WriteLine("TRACER  hello from Runner");
+            Console.WriteLine("TRACER num players: " + players.Count);
         }
 
         public string CanaryRepeat(string s, int n) {

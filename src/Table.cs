@@ -16,6 +16,16 @@ namespace WarO_CSharp_v2
         public List<Player> GetPlayers() { return players; }
         public Hand GetKitty() { return kitty; }
 
+        public bool HasPrizeCard() {
+            return kitty.GetCards().Count > 0;
+        }
+
+        public int GetPrizeCard() {
+            int result = kitty.GetCards()[0];
+            kitty = kitty.Select(result);
+            return result;
+        }
+
         public override string ToString()
         {
             string result = "Table: \n";

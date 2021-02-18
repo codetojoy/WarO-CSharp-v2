@@ -52,7 +52,7 @@ namespace WarO_CSharp_v2
             string result = "[";
 
             if (cards.Any()) {
-                result = " ";
+                result += " ";
                 foreach (int card in cards) {
                     result += card + " ";
                 }

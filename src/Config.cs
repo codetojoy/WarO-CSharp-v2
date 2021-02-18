@@ -6,7 +6,13 @@ namespace WarO_CSharp_v2
 {
     public class Config
     {
+        private static bool isVerbose = true;
         private int maxCard = 16;
+
+        public static bool IsVerbose()
+        {
+            return isVerbose;
+        }
 
         public int GetNumCardsPerHand() {
             int numPlayers = GetPlayers().Count;
@@ -20,7 +26,7 @@ namespace WarO_CSharp_v2
         public List<Player> GetPlayers() {
             List<Player> players = new List<Player>();
 
-            Player p1 = new Player("Bach", new NextCard(), GetMaxCard());
+            Player p1 = new Player("You", new ConsoleStrategy(), GetMaxCard());
             Player p2 = new Player("Chopin", new NextCard(), GetMaxCard());
             Player p3 = new Player("Mozart", new NextCard(), GetMaxCard());
 

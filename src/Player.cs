@@ -33,9 +33,18 @@ namespace WarO_CSharp_v2
         public int GetTotal() { return playerStats.GetTotal(); }
         public String GetName() { return name; }
 
+        public Bid GetBid(int prizeCard) {
+            int offer = strategy.SelectCard(prizeCard, hand.GetCards(), maxCard);
+            // TODO: ensure that offer is contained in hand ! (no cheaters)
+
+            Bid bid = new Bid(prizeCard, offer, this);
+
+            return bid;
+        }
+
         public override string ToString()
         {
-            string result = name + "(" + strategy.GetName() + ")" + " " + hand.ToString();
+            string result = name + " (" + strategy.GetName() + ")" + " " + hand.ToString();
             return result;
         }
     }

@@ -44,3 +44,4 @@ TODO:
 * write a remote client 
 * test coverage ?
 * LINQ ?
+* string interpolation

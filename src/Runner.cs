@@ -55,7 +55,10 @@ namespace WarO_CSharp_v2
 
         private void PlayGame() {
             var config = new Config();
-            Console.WriteLine("TRACER TODO: play game");
+            var dealer = new Dealer();
+            var table = dealer.Deal(config);
+            var game = new Game();
+            game.PlayGame(table);
         }
 
         public string CanaryRepeat(string s, int n) {

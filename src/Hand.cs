@@ -49,11 +49,17 @@ namespace WarO_CSharp_v2
 
         public override string ToString()
         {
-            string result = "[ ";
-            foreach (int card in cards) {
-                result += card + " ";
+            string result = "[";
+
+            if (cards.Any()) {
+                result = " ";
+                foreach (int card in cards) {
+                    result += card + " ";
+                }
             }
+
             result += "]";
+
             return result;
         }
     }

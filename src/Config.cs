@@ -30,5 +30,15 @@ namespace WarO_CSharp_v2
 
             return players;
         }
+
+        public override string ToString()
+        {
+            string result = "\n";
+            result += "maxCard: " + maxCard + "\n";
+            foreach (Player player in GetPlayers()) {
+                result += player.ToString() + "\n";
+            }
+            return result;
+        }
     }
 }

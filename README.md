@@ -9,15 +9,6 @@ a C# submission for War-O as a code exercise
 * It is probably not idiomatic as I'm still learning the .NET Core ecosystem, especially project structure and packaging.
 * I have written a version in Java where everything is immutable, and some of that spirit continues in this version (though it is not especially elegant).
 
-To Run Tests:
----------
-
-useful commands:
-
-* `dotnet clean`
-* `dotnet test`
-* or, in Bash, `./test.sh`
-
 To Run/Test:
 ---------
 
@@ -42,3 +33,14 @@ Rules:
 ---------
 
 Rules are [here](Rules.md).
+
+TODO:
+---------
+
+* console strategy
+* remote strategy
+* format code appropriately
+* move code into folders, possibly namespaces
+* write a remote client 
+* test coverage ?
+* LINQ ?

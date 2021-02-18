@@ -5,6 +5,7 @@ namespace WarO_CSharp_v2
 {
     public interface IStrategy
     {
-       int SelectCard(int prizeCard, List<int> hand, int maxCard);
+        string GetName();
+        int SelectCard(int prizeCard, List<int> hand, int maxCard);
     }
 }

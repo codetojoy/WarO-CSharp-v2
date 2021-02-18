@@ -35,7 +35,7 @@ namespace WarO_CSharp_v2
 
         public override string ToString()
         {
-            string result = name + " " + hand.ToString();
+            string result = name + "(" + strategy.GetName() + ")" + " " + hand.ToString();
             return result;
         }
     }

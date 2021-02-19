@@ -8,17 +8,9 @@ namespace WarO_CSharp_v2
         public void Run(string[] args)
         {
             InputLoop();
-            /*
-            var config = new Config();
-            var dealer = new Dealer();
-            var table = dealer.Deal(config);
-            Console.WriteLine(table.ToString());
-            */
         }
         public void InputLoop() {
-            bool isDone = false;
-
-            while (!isDone) {
+            while (true) {
                 Console.WriteLine("");
                 Console.WriteLine("Show config [s]:");
                 Console.WriteLine("New game    [n]:");
@@ -27,13 +19,13 @@ namespace WarO_CSharp_v2
                 string input = Console.ReadLine().Trim().ToLower();
 
                 switch (input) {
-                    case "q":
-                        isDone = Quit();
+                    case Constants.CMD_QUIT:
+                        Quit();
                         break;
-                    case "s":
+                    case Constants.CMD_SHOW_CONFIG:
                         ShowConfig();
                         break;
-                    case "n":
+                    case Constants.CMD_NEW_GAME:
                         PlayGame();
                         break;
                     default:
@@ -43,9 +35,9 @@ namespace WarO_CSharp_v2
             }
         }
 
-        private bool Quit() {
+        public void Quit() {
             Console.WriteLine("Roger copy... bye for now");
-            return true;
+            Environment.Exit(0);
         }
 
         private void ShowConfig() {

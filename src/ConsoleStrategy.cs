@@ -16,6 +16,7 @@ namespace WarO_CSharp_v2
             while (!isDone) {
                 Console.WriteLine("select card: ");
                 input = Console.ReadLine();
+                IsQuit(input);
                 bool isValid = IsValid(input, hand);
                 isDone = isValid;
 
@@ -28,7 +29,16 @@ namespace WarO_CSharp_v2
             return selectedCard;
         }
 
-        private bool IsValid(string input, List<int> hand) {
+        private void IsQuit(string input)
+        {
+            if (input.Trim().ToLower() == Constants.CMD_FORCE_QUIT)
+            {
+                new Runner().Quit();
+            }
+        }
+
+        private bool IsValid(string input, List<int> hand)
+        {
             bool result = false;
 
             try
@@ -44,7 +54,8 @@ namespace WarO_CSharp_v2
             return result;
         }
 
-        private int ParseInput(string input) {
+        private int ParseInput(string input)
+        {
             return Int32.Parse(input);
         }
     }

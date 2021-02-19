@@ -34,5 +34,11 @@ namespace WarO_CSharp_v2
             PlayerStats newPlayerStats = new PlayerStats(0, this.numGamesWon, 0);
             return newPlayerStats;
         }
+
+        public override string ToString()
+        {
+            string result = $"g: {numGamesWon} :r {numRoundsWon} total: {total}";
+            return result;
+        }
     }
 }

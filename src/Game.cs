@@ -8,6 +8,7 @@ namespace WarO_CSharp_v2
     {
         public void PlayGame(Table table)
         {
+            table.Reset();
             int roundIndex = 1;
             while (table.HasPrizeCard()) {
                 if (Config.IsVerbose()) {
@@ -23,8 +24,14 @@ namespace WarO_CSharp_v2
         public void PlayRound(int prizeCard, List<Player> players)
         {
             var bids = GetBids(prizeCard, players);
-            var winner = DetermineRoundWinner(bids);
-            string msg = winner.GetBidder().GetName() + " wins ROUND prize: " + prizeCard;
+            var winningBid = DetermineRoundWinner(bids);
+            AwardPoints(prizeCard, winningBid.GetBidder());
+        }
+
+        public void AwardPoints(int prizeCard, Player winner)
+        {
+            winner.WinsRound(prizeCard);
+            string msg = $"{winner.GetName()} wins ROUND prize: {prizeCard}";
             Console.WriteLine(msg);
         }
 

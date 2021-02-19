@@ -26,6 +26,14 @@ namespace WarO_CSharp_v2
             return result;
         }
 
+        public void Reset()
+        {
+            foreach (Player p in players)
+            {
+
+            }
+        }
+
         public override string ToString()
         {
             string result = "Table: \n";

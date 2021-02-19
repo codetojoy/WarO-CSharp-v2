@@ -38,6 +38,10 @@ TODO:
 ---------
 
 * console strategy
+* abandon game
+* constants
+* award points 
+* validator 
 * remote strategy
 * format code appropriately
 * move code into folders, possibly namespaces

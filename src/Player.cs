@@ -6,7 +6,7 @@ namespace WarO_CSharp_v2
     {
         private readonly string name;
         private readonly IStrategy strategy;
-        private readonly PlayerStats playerStats;
+        private PlayerStats playerStats;
         private readonly int maxCard;
         private Hand hand;
 
@@ -34,17 +34,28 @@ namespace WarO_CSharp_v2
         public String GetName() { return name; }
 
         public Bid GetBid(int prizeCard) {
-            int offer = strategy.SelectCard(prizeCard, hand.GetCards(), maxCard);
             // TODO: ensure that offer is contained in hand ! (no cheaters)
+            int offer = strategy.SelectCard(prizeCard, hand.GetCards(), maxCard);
+            hand = hand.Select(offer);
 
             Bid bid = new Bid(prizeCard, offer, this);
 
             return bid;
         }
 
+        public void WinsRound(int prizeCard)
+        {
+            playerStats = playerStats.WinsRound(prizeCard);
+        }
+
+        public void Reset()
+        {
+            playerStats = playerStats.Reset();
+        }
+
         public override string ToString()
         {
-            string result = name + " (" + strategy.GetName() + ")" + " " + hand.ToString();
+            string result = $"{name} ({strategy.GetName()}) {playerStats.ToString()} hand: {hand.ToString()}";
             return result;
         }
     }

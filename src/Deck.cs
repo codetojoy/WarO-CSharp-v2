@@ -12,7 +12,8 @@ namespace WarO_CSharp_v2
         private int maxCard;
         private List<int> cards = new List<int>();
 
-        public Deck(int maxCard) {
+        public Deck(int maxCard)
+        {
             this.maxCard = maxCard;
             for (int i = 1; i <= maxCard; i++) {
                 this.cards.Add(i);
@@ -20,7 +21,8 @@ namespace WarO_CSharp_v2
             Shuffle();
         }
 
-        public List<int> GetCards() {
+        public List<int> GetCards()
+        {
             return cards;
         }
 
@@ -28,7 +30,8 @@ namespace WarO_CSharp_v2
         public void Shuffle()
         {
             int n = cards.Count;
-            while (n > 1) {
+            while (n > 1)
+            {
                 n--;
                 int k = rng.Next(n + 1);
                 int value = cards[k];

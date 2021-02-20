@@ -8,7 +8,8 @@ namespace WarO_CSharp_v2
         private readonly int offer;
         private readonly Player bidder;
 
-        public Bid(int prizeCard, int offer, Player bidder) {
+        public Bid(int prizeCard, int offer, Player bidder)
+        {
             this.prizeCard = prizeCard;
             this.offer = offer;
             this.bidder = bidder;

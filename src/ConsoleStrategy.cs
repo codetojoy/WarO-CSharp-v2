@@ -13,14 +13,16 @@ namespace WarO_CSharp_v2
             bool isDone = false;
             string input = "";
 
-            while (!isDone) {
+            while (!isDone)
+            {
                 Console.WriteLine("select card: ");
                 input = Console.ReadLine();
                 IsQuit(input);
                 bool isValid = IsValid(input, hand);
                 isDone = isValid;
 
-                if (!isValid) {
+                if (!isValid)
+                {
                     Console.Error.WriteLine("illegal choice!");
                 }
             }

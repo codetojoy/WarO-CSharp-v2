@@ -17,7 +17,8 @@ namespace WarO_CSharp_v2
             Hand kitty = hands[0];
             hands.RemoveAt(0);
 
-            for (int index = 0; index < players.Count; index++) {
+            for (int index = 0; index < players.Count; index++)
+            {
                 Hand hand = hands[index];
                 players[index].SetHand(hand);
             }
@@ -34,7 +35,8 @@ namespace WarO_CSharp_v2
             var hand = new Hand();
             hands.Add(hand);
 
-            for (int i = 0; i < cards.Count; i++) {
+            for (int i = 0; i < cards.Count; i++)
+            {
                 if (counter >= n) {
                     counter = 0;
                     hand = new Hand();

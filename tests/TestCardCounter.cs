@@ -16,7 +16,7 @@ namespace WarO_CSharp_v2
             AddCards(table.GetPlayers());
         }
 
-        protected void AddCards(List<int> list) {
+        public void AddCards(List<int> list) {
             this.cards.AddRange(list);
         }
         protected void AddCards(List<Player> players) {

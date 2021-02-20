@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
 {
@@ -48,9 +49,18 @@ namespace WarO_CSharp_v2
             playerStats = playerStats.WinsRound(prizeCard);
         }
 
+        public void WinsGame()
+        {
+            playerStats = playerStats.WinsGame();
+        }
         public void Reset()
         {
             playerStats = playerStats.Reset();
+        }
+
+        public List<int> GetCards()
+        {
+            return hand.GetCards();
         }
 
         public override string ToString()
@@ -60,44 +70,3 @@ namespace WarO_CSharp_v2
         }
     }
 }
-
-/*
-    public Player winsGame() {
-        PlayerStats newPlayerStats = playerStats.winsGame();
-        Player newPlayer = new Player(name, strategy, maxCard, hand, newPlayerStats);
-        return newPlayer;
-    }
-
-    public Player winsRound(Bid bid) {
-        Hand newHand = hand.select(bid.getOffer());
-        PlayerStats newPlayerStats = playerStats.winsRound(bid.getPrizeCard());
-        Player newPlayer = new Player(name, strategy, maxCard, newHand, newPlayerStats);
-        return newPlayer;
-    }
-
-    public Player losesRound(Bid bid) {
-        Hand newHand = hand.select(bid.getOffer());
-        Player newPlayer = new Player(name, strategy, maxCard, newHand, this.playerStats);
-        return newPlayer;
-    }
-
-    public Bid getBid(int prizeCard) {
-        int offer = strategy.selectCard(prizeCard, hand.cardsAsIntStream(), maxCard);
-        // TODO: ensure that offer is contained in hand ! (no cheaters)
-
-        Bid bid = new Bid(prizeCard, offer, this);
-
-        return bid;
-    }
-
-    public long getNumCardsInHand() {
-        return hand.cardsAsIntStream().boxed().count();
-    }
-
-    public Player reset(Hand newHand) {
-        PlayerStats newPlayerStats = playerStats.reset();
-        Player newPlayer = new Player(name, strategy, maxCard, newHand, newPlayerStats);
-        return newPlayer;
-    }
-}
-*/

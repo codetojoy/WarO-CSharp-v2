@@ -50,7 +50,7 @@ namespace WarO_CSharp_v2
             var dealer = new Dealer();
             var table = dealer.Deal(config);
             var game = new Game();
-            game.PlayGame(table);
+            game.PlayGame(table, config.IsVerbose());
         }
 
         public string CanaryRepeat(string s, int n) {

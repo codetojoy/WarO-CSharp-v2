@@ -1,12 +1,12 @@
 
-using System;
 using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
 {
     public class Dealer
     {
-        public Table Deal(Config config) {
+        public Table Deal(IConfig config)
+        {
             List<Player> players = config.GetPlayers();
             int maxCard = config.GetMaxCard();
             int numCardsPerHand = config.GetNumCardsPerHand();
@@ -27,7 +27,7 @@ namespace WarO_CSharp_v2
         }
 
         // TODO: use LINQ ? this is not elegant
-        public List<Hand> Partition(List<int> cards, int n)
+        protected List<Hand> Partition(List<int> cards, int n)
         {
             var hands = new List<Hand>();
             var counter = 0;

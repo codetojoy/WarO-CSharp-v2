@@ -37,10 +37,9 @@ Rules are [here](Rules.md).
 TODO:
 ---------
 
-* console strategy
-* abandon game
-* constants
-* award points 
+* JSON config 
+* fix bug about # of games
+* consider immutability
 * validator 
 * remote strategy
 * format code appropriately
@@ -48,4 +47,3 @@ TODO:
 * write a remote client 
 * test coverage ?
 * LINQ ?
-* string interpolation

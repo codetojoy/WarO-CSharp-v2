@@ -26,11 +26,11 @@ namespace WarO_CSharp_v2
             return result;
         }
 
-        public void Reset()
+        public void ResetPoints()
         {
             foreach (Player p in players)
             {
-
+                p.Reset();
             }
         }
 

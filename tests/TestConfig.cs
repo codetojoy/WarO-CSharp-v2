@@ -1,13 +1,12 @@
 
-using System;
 using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
 {
-    public class Config : IConfig
+    public class TestConfig : IConfig
     {
-        private static bool isVerbose = true;
-        private int maxCard = 16;
+        private static bool isVerbose = false;
+        private int maxCard = 12;
 
         public bool IsVerbose()
         {
@@ -38,16 +37,6 @@ namespace WarO_CSharp_v2
             players.Add(p3);
 
             return players;
-        }
-
-        public override string ToString()
-        {
-            string result = "\n";
-            result += "maxCard: " + maxCard + "\n";
-            foreach (Player player in GetPlayers()) {
-                result += player.ToString() + "\n";
-            }
-            return result;
         }
     }
 }

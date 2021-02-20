@@ -5,12 +5,24 @@ using System.Collections.Generic;
 namespace WarO_CSharp_v2
 {
     [TestFixture]
-    public class Dealer_Tests
+    public class Dealer_Tests : Dealer
     {
+        [Test]
+        public void Deal_Basic()
+        {
+            var config = new TestConfig();
+
+            // test
+            var result = this.Deal(config);
+
+            var cardCounter = new TestCardCounter();
+            cardCounter.AddCards(result);
+            Assert.IsTrue(cardCounter.Validate(config.GetMaxCard()));
+        }
+
         [Test]
         public void Partition_Basic()
         {
-            var dealer = new Dealer();
             int numCardsPerHand = 4;
             int numCards = 16;
             var cards = new List<int>();
@@ -22,7 +34,7 @@ namespace WarO_CSharp_v2
             }
 
             // test
-            List<Hand> hands = dealer.Partition(cards, numCardsPerHand);
+            List<Hand> hands = this.Partition(cards, numCardsPerHand);
 
             foreach (Hand hand in hands) {
                 foreach (int card in hand.GetCards()) {

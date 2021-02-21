@@ -54,9 +54,11 @@ namespace WarO_CSharp_v2
             game.PlayGame(table, config.IsVerbose());
         }
 
-        public string CanaryRepeat(string s, int n) {
+        public string CanaryRepeat(string s, int n)
+        {
             string result = "";
-            for (int i = 1; i <= n; i++) {
+            for (int i = 1; i <= n; i++)
+            {
                 result += s;
             }
             return result;

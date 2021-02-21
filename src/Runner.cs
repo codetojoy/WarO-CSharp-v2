@@ -48,7 +48,8 @@ namespace WarO_CSharp_v2
         private void PlayGame() {
             var config = new Config();
             var dealer = new Dealer();
-            var table = dealer.Deal(config);
+            var deck = new Deck(config.GetMaxCard());
+            var table = dealer.Deal(config, deck);
             var game = new Game();
             game.PlayGame(table, config.IsVerbose());
         }

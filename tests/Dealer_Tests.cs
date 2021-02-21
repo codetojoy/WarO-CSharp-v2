@@ -11,9 +11,10 @@ namespace WarO_CSharp_v2
         public void Deal_Basic()
         {
             var config = new TestConfig();
+            var deck = new Deck(config.GetMaxCard());
 
             // test
-            var result = this.Deal(config);
+            var result = this.Deal(config, deck);
 
             var cardCounter = new TestCardCounter();
             cardCounter.AddCards(result);

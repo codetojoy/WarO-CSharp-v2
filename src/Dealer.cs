@@ -5,13 +5,12 @@ namespace WarO_CSharp_v2
 {
     public class Dealer
     {
-        public Table Deal(IConfig config)
+        public Table Deal(IConfig config, IDeck deck)
         {
             List<Player> players = config.GetPlayers();
             int maxCard = config.GetMaxCard();
             int numCardsPerHand = config.GetNumCardsPerHand();
 
-            Deck deck = new Deck(maxCard);
             List<int> cards = deck.GetCards();
             List<Hand> hands = Partition(cards, numCardsPerHand);
             Hand kitty = hands[0];

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
 {
-    public class Deck
+    public class Deck : IDeck
     {
         private static Random rng = new Random();
         private int maxCard;

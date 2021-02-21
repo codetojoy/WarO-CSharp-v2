@@ -20,6 +20,7 @@ Origin:
 ---------
 
 * `dotnet new console`
+* `dotnet new sln`
 * article [here](https://insimpleterms.blog/adding-nunit-tests-to-a-net-core-console-app)
     - `dotnet sln add src/WarO-CSharp-v2.csproj`
     - `dotnet run -p src/WarO-CSharp-v2.csproj`

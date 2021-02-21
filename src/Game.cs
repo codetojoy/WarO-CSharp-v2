@@ -11,8 +11,10 @@ namespace WarO_CSharp_v2
             table.ResetPoints();
             var players = table.GetPlayers();
             int roundIndex = 1;
-            while (table.HasPrizeCard()) {
-                if (isVerbose) {
+            while (table.HasPrizeCard())
+            {
+                if (isVerbose)
+                {
                     Console.WriteLine("round: " + roundIndex);
                     Console.WriteLine(table.ToString());
                 }
@@ -27,19 +29,19 @@ namespace WarO_CSharp_v2
             Console.WriteLine(table.ToString());
         }
 
-        public void PlayRound(int prizeCard, List<Player> players)
+        protected void PlayRound(int prizeCard, List<Player> players)
         {
             var bids = GetBids(prizeCard, players);
             var winningBid = DetermineRoundWinner(bids);
             AwardForRound(prizeCard, winningBid.GetBidder());
         }
 
-        public void AwardForGame(Player winner)
+        private void AwardForGame(Player winner)
         {
             winner.WinsGame();
         }
 
-        public void AwardForRound(int prizeCard, Player winner)
+        private void AwardForRound(int prizeCard, Player winner)
         {
             winner.WinsRound(prizeCard);
             string msg = $"{winner.GetName()} wins ROUND prize: {prizeCard}";
@@ -59,12 +61,14 @@ namespace WarO_CSharp_v2
             return bids;
         }
 
-        public Bid DetermineRoundWinner(List<Bid> bids)
+        protected Bid DetermineRoundWinner(List<Bid> bids)
         {
             Bid winningBid = null;
             int highestBid = 0;
-            foreach (Bid bid in bids) {
-                if (bid.GetOffer() > highestBid) {
+            foreach (Bid bid in bids)
+            {
+                if (bid.GetOffer() > highestBid)
+                {
                     winningBid = bid;
                     highestBid = bid.GetOffer();
                 }

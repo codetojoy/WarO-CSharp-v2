@@ -15,11 +15,13 @@ namespace WarO_CSharp_v2
             // test
             Deck deck = new Deck(maxCard);
 
+            // confirm all cards accounted for
             var cards = deck.GetCards();
             var cardCounter = new TestCardCounter();
             cardCounter.AddCards(cards);
             Assert.IsTrue(cardCounter.Validate(maxCard));
 
+            // confirm there was 'shuffling'
             int numMatches = 0;
             int maxNumMatches = maxCard / 4;
 

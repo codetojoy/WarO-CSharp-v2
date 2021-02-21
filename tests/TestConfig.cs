@@ -28,9 +28,9 @@ namespace WarO_CSharp_v2
         {
             List<Player> players = new List<Player>();
 
-            Player p1 = new Player("You", new ConsoleStrategy(), GetMaxCard());
-            Player p2 = new Player("Chopin", new NextCard(), GetMaxCard());
-            Player p3 = new Player("Mozart", new NextCard(), GetMaxCard());
+            Player p1 = new Player(Constants.TEST_PLAYER_YOU, new ConsoleStrategy(), GetMaxCard());
+            Player p2 = new Player(Constants.TEST_PLAYER_CHOPIN, new NextCard(), GetMaxCard());
+            Player p3 = new Player(Constants.TEST_PLAYER_YOU, new NextCard(), GetMaxCard());
 
             players.Add(p1);
             players.Add(p2);

@@ -7,5 +7,9 @@ namespace WarO_CSharp_v2
         public const string CMD_SHOW_CONFIG = "s";
         public const string CMD_FORCE_QUIT = "q!";
         public const string CMD_QUIT = "q";
+
+        public const string TEST_PLAYER_CHOPIN = "Chopin";
+        public const string TEST_PLAYER_MOZART = "Mozart";
+        public const string TEST_PLAYER_YOU = "You";
     }
 }

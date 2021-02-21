@@ -33,7 +33,7 @@ namespace WarO_CSharp_v2
         {
             var bids = GetBids(prizeCard, players);
             var winningBid = DetermineRoundWinner(bids);
-            AwardForRound(prizeCard, winningBid.GetBidder());
+            AwardForRound(winningBid);
         }
 
         private void AwardForGame(Player winner)
@@ -41,8 +41,10 @@ namespace WarO_CSharp_v2
             winner.WinsGame();
         }
 
-        private void AwardForRound(int prizeCard, Player winner)
+        private void AwardForRound(Bid winningBid)
         {
+            int prizeCard = winningBid.GetPrizeCard();
+            Player winner = winningBid.GetBidder();
             winner.WinsRound(prizeCard);
             string msg = $"{winner.GetName()} wins ROUND prize: {prizeCard}";
             Console.WriteLine(msg);

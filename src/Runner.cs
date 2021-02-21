@@ -9,8 +9,10 @@ namespace WarO_CSharp_v2
         {
             InputLoop();
         }
-        public void InputLoop() {
-            while (true) {
+        public void InputLoop()
+        {
+            while (true)
+            {
                 Console.WriteLine("");
                 Console.WriteLine("Show config [s]:");
                 Console.WriteLine("New game    [n]:");
@@ -18,7 +20,8 @@ namespace WarO_CSharp_v2
                 Console.WriteLine("enter command: ");
                 string input = Console.ReadLine().Trim().ToLower();
 
-                switch (input) {
+                switch (input)
+                {
                     case Constants.CMD_QUIT:
                         Quit();
                         break;
@@ -35,33 +38,26 @@ namespace WarO_CSharp_v2
             }
         }
 
-        public void Quit() {
+        public void Quit()
+        {
             Console.WriteLine("Roger copy... bye for now");
             Environment.Exit(0);
         }
 
-        private void ShowConfig() {
+        private void ShowConfig()
+        {
             var config = new Config();
             Console.WriteLine(config.ToString());
         }
 
-        private void PlayGame() {
+        private void PlayGame()
+        {
             var config = new Config();
             var dealer = new Dealer();
             var deck = new Deck(config.GetMaxCard());
             var table = dealer.Deal(config, deck);
             var game = new Game();
             game.PlayGame(table, config.IsVerbose());
-        }
-
-        public string CanaryRepeat(string s, int n)
-        {
-            string result = "";
-            for (int i = 1; i <= n; i++)
-            {
-                result += s;
-            }
-            return result;
         }
     }
 }

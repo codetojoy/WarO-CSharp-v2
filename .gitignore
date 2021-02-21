@@ -2,3 +2,5 @@ obj
 bin
 **/out.log
 **/tmp.log
+tests/Coverage_Report
+tests/coverage.cobertura.xml

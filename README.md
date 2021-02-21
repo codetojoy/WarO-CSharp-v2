@@ -14,6 +14,7 @@ To Run/Test:
 
 * `./run.sh`
 * `./test.sh`
+* `./coverage_test.sh`
 
 Origin:
 ---------
@@ -37,13 +38,14 @@ Rules are [here](Rules.md).
 TODO:
 ---------
 
+* x - test coverage ?
+* consider LINQ review
 * JSON config 
 * fix bug about # of games
 * consider immutability
-* validator 
+* validator during game, capture discards 
 * remote strategy
 * format code appropriately
 * move code into folders, possibly namespaces
 * write a remote client 
-* test coverage ?
-* LINQ ?
+

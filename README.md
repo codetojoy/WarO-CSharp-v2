@@ -43,15 +43,14 @@ TODO:
 * x - JSON config 
 * x - parametric tests for strategies
 * x - pathological strategy
+* x - remote strategy
+    - https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
 * consider properties 
 * async, like Java
 * consider LINQ review
 * fix bug about # of games
 * consider immutability
 * validator during game, capture discards 
-* remote strategy
-    - https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
 * format code appropriately
 * move code into folders, possibly namespaces
-* write a remote client 
-
+* write a remote API server 

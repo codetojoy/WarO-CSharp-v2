@@ -10,6 +10,9 @@ namespace WarO_CSharp_v2
 
             switch (name.Trim().ToLower())
             {
+                case Constants.STRATEGY_API:
+                    strategy = new ApiStrategy();
+                    break;
                 case Constants.STRATEGY_CONSOLE:
                     strategy = new ConsoleStrategy();
                     break;

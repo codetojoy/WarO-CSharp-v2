@@ -44,9 +44,6 @@ namespace WarO_CSharp_v2
             using (StreamReader file = File.OpenText(jsonFile))
             {
                 ParseConfig(file);
-                // var serializer = new JsonSerializer();
-                // config = (JsonDataConfig) serializer.Deserialize(file, typeof(JsonDataConfig));
-                // Console.WriteLine($"TRACER {config}");
             }
             Console.WriteLine("TRACER parseConfig => OK");
         }

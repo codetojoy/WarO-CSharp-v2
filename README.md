@@ -40,8 +40,9 @@ TODO:
 ---------
 
 * x - test coverage ?
-* consider LINQ review
 * JSON config 
+* do tests need to import the name space ? 
+* consider LINQ review
 * fix bug about # of games
 * consider immutability
 * validator during game, capture discards 

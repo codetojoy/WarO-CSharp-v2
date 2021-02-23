@@ -13,12 +13,6 @@ namespace WarO_CSharp_v2
         public string Name { get; set; }
         [JsonProperty("strategy_name")]
         public string StrategyName { get; set; }
-
-/*
-        public override string ToString() {
-            return $"name: {Name} strategy: {StrategyName}";
-        }
-        */
     }
     class JsonDataConfig
     {
@@ -31,36 +25,37 @@ namespace WarO_CSharp_v2
 
         [JsonProperty("players")]
         public List<JsonDataPlayer> players { get; set; }
-
-/*
-        public override string ToString() {
-            var s = $"# games: {NumGames} # cards: {NumCards} verbose? {IsVerbose}\n";
-            foreach (Player p in players)
-            {
-                s += $"{p}\n";
-            }
-            return s;
-        }
-        */
     }
     public class JsonConfig : IConfig
     {
         private JsonDataConfig config;
 
+        public JsonConfig()
+        {
+
+        }
         public JsonConfig(string jsonFile)
         {
-            parseConfig(jsonFile);
+            ParseConfig(jsonFile);
         }
 
-        void parseConfig(string jsonFile)
+        void ParseConfig(string jsonFile)
         {
             using (StreamReader file = File.OpenText(jsonFile))
             {
-                var serializer = new JsonSerializer();
-                config = (JsonDataConfig) serializer.Deserialize(file, typeof(JsonDataConfig));
+                ParseConfig(file);
+                // var serializer = new JsonSerializer();
+                // config = (JsonDataConfig) serializer.Deserialize(file, typeof(JsonDataConfig));
                 // Console.WriteLine($"TRACER {config}");
             }
             Console.WriteLine("TRACER parseConfig => OK");
+        }
+
+        public void ParseConfig(TextReader textReader)
+        {
+            var serializer = new JsonSerializer();
+            config = (JsonDataConfig) serializer.Deserialize(textReader, typeof(JsonDataConfig));
+            Console.WriteLine("TRACER parseConfig.TR => OK");
         }
 
         public bool IsVerbose()

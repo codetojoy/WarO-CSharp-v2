@@ -40,8 +40,11 @@ TODO:
 ---------
 
 * x - test coverage ?
-* JSON config 
-* do tests need to import the name space ? 
+* x - JSON config 
+* x - parametric tests for strategies
+* x - pathological strategy
+* consider properties 
+* async, like Java
 * consider LINQ review
 * fix bug about # of games
 * consider immutability

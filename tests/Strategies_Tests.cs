@@ -8,13 +8,18 @@ namespace WarO_CSharp_v2
     {
         Strategies strategies = new Strategies();
 
-        [Test]
-        public void GetStrategy_Max()
+        [TestCase("console", Constants.STRATEGY_CONSOLE)]
+        [TestCase("max", Constants.STRATEGY_MAX)]
+        [TestCase("min", Constants.STRATEGY_MIN)]
+        [TestCase("nearest", Constants.STRATEGY_NEAREST)]
+        [TestCase("next", Constants.STRATEGY_NEXT)]
+        [TestCase("pathological", Constants.STRATEGY_PATHOLOGICAL)]
+        public void GetStrategy(string actualName, string expectedName)
         {
             // test
-            var result = strategies.GetStrategy("max");
+            var result = strategies.GetStrategy(actualName);
 
-            Assert.AreEqual(Constants.STRATEGY_MAX, result.GetName());
+            Assert.AreEqual(expectedName, result.GetName());
         }
     }
 }

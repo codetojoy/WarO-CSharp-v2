@@ -25,6 +25,9 @@ namespace WarO_CSharp_v2
                 case Constants.STRATEGY_NEXT:
                     strategy = new NextCard();
                     break;
+                case Constants.STRATEGY_PATHOLOGICAL:
+                    strategy = new PathologicalPauseStrategy();
+                    break;
                 default:
                     throw new Exception("unknown strategy");
             }

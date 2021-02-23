@@ -4,7 +4,7 @@
 "is_verbose": true,
 "players": [
     {"name": "you", "strategy_name": "console"},
-    {"name": "bach", "strategy_name": "next_card"},
-    {"name": "shostakovich", "strategy_name": "next_card"}
+    {"name": "bach", "strategy_name": "next"},
+    {"name": "shostakovich", "strategy_name": "next"}
 ]
 }

@@ -7,10 +7,16 @@ namespace WarO_CSharp_v2
     {
         public void Run(string[] args)
         {
-            InputLoop();
+            if (args.Length == 0)
+            {
+                Console.Error.WriteLine("requires config file as arg");
+                Environment.Exit(-1);
+            }
+            InputLoop(args[0]);
         }
-        public void InputLoop()
+        public void InputLoop(string configFile)
         {
+            IConfig config = new JsonConfig(configFile);
             while (true)
             {
                 Console.WriteLine("");
@@ -26,10 +32,10 @@ namespace WarO_CSharp_v2
                         Quit();
                         break;
                     case Constants.CMD_SHOW_CONFIG:
-                        ShowConfig();
+                        ShowConfig(config);
                         break;
                     case Constants.CMD_NEW_GAME:
-                        PlayGame();
+                        PlayGame(config);
                         break;
                     default:
                         Console.Error.WriteLine("unrecognized command!");
@@ -44,15 +50,13 @@ namespace WarO_CSharp_v2
             Environment.Exit(0);
         }
 
-        private void ShowConfig()
+        private void ShowConfig(IConfig config)
         {
-            var config = new Config();
             Console.WriteLine(config.ToString());
         }
 
-        private void PlayGame()
+        private void PlayGame(IConfig config)
         {
-            var config = new Config();
             var dealer = new Dealer();
             var deck = new Deck(config.GetMaxCard());
             var table = dealer.Deal(config, deck);

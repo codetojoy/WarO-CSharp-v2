@@ -46,6 +46,7 @@ TODO:
 * consider immutability
 * validator during game, capture discards 
 * remote strategy
+    - https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
 * format code appropriately
 * move code into folders, possibly namespaces
 * write a remote client 

@@ -13,7 +13,7 @@ namespace WarO_CSharp_v2
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.Error.WriteLine($"caught exception! msg: {e.Message}");
             }
             Console.WriteLine("Ready.");
         }

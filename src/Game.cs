@@ -58,31 +58,13 @@ namespace WarO_CSharp_v2
 
         protected Bid DetermineRoundWinner(IList<Bid> bids)
         {
-            Bid winningBid = null;
-            int highestBid = 0;
-            foreach (Bid bid in bids)
-            {
-                if (bid.Offer > highestBid)
-                {
-                    winningBid = bid;
-                    highestBid = bid.Offer;
-                }
-            }
+            Bid winningBid = bids.OrderBy(bid => bid.Offer).Last();
             return winningBid;
         }
 
-        public Player DetermineGameWinner(IList<Player> players)
+        protected Player DetermineGameWinner(IList<Player> players)
         {
-            Player winner = null;
-            int highestTotal = 0;
-            foreach (Player player in players)
-            {
-                if (player.GetPlayerStats().GetTotal() > highestTotal)
-                {
-                    highestTotal = player.GetPlayerStats().GetTotal();
-                    winner = player;
-                }
-            }
+            Player winner = players.OrderBy(player => player.GetPlayerStats().GetTotal()).Last();
             return winner;
         }
     }

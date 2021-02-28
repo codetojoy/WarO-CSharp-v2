@@ -1,5 +1,4 @@
 
-using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -32,7 +31,6 @@ namespace WarO_CSharp_v2
 
         public JsonConfig()
         {
-
         }
         public JsonConfig(string jsonFile)
         {
@@ -45,14 +43,12 @@ namespace WarO_CSharp_v2
             {
                 ParseConfig(file);
             }
-            Console.WriteLine("TRACER parseConfig => OK");
         }
 
         public void ParseConfig(TextReader textReader)
         {
             var serializer = new JsonSerializer();
             config = (JsonDataConfig) serializer.Deserialize(textReader, typeof(JsonDataConfig));
-            Console.WriteLine("TRACER parseConfig.TR => OK");
         }
 
         public bool IsVerbose()

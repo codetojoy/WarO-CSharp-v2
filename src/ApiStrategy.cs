@@ -32,13 +32,8 @@ namespace WarO_CSharp_v2
         {
             return Constants.STRATEGY_API;
         }
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
-        {
-            var tmpCard = FetchSelect(prizeCard, hand, maxCard);
-            return hand[0];
-        }
 
-        public int FetchSelect(int prizeCard, List<int> hand, int maxCard)
+        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
         {
             var result = -5150;
 
@@ -71,11 +66,12 @@ namespace WarO_CSharp_v2
                 var serializer = new JsonSerializer();
                 var apiResult = (ApiResult) serializer.Deserialize(textReader, typeof(ApiResult));
                 result = apiResult.Card;
-                Console.WriteLine($"TRACER ApiStrategy msg: {apiResult.Message}");
+                Console.WriteLine($"TRACER ApiStrategy card: {result} msg: {apiResult.Message}");
             }
             else
             {
                 Console.Error.WriteLine("TRACER ApiStrategy failed!");
+                throw new Exception("ApiStrategy failed");
             }
 
             return result;

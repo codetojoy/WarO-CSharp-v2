@@ -26,15 +26,12 @@ namespace WarO_CSharp_v2
         }
         public IList<Player> GetPlayers()
         {
-            List<Player> players = new List<Player>();
 
             Player p1 = new Player(Constants.TEST_PLAYER_BRAHMS, new NextCard(), GetMaxCard());
             Player p2 = new Player(Constants.TEST_PLAYER_CHOPIN, new NextCard(), GetMaxCard());
             Player p3 = new Player(Constants.TEST_PLAYER_MOZART, new NextCard(), GetMaxCard());
 
-            players.Add(p1);
-            players.Add(p2);
-            players.Add(p3);
+            var players = new List<Player>() {p1, p2, p3};
 
             return players;
         }

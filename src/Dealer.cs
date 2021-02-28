@@ -13,7 +13,7 @@ namespace WarO_CSharp_v2
             var maxCard = config.GetMaxCard();
             var numCardsPerHand = config.GetNumCardsPerHand();
 
-            var cards = deck.GetCards();
+            var cards = deck.Cards;
             var hands = Partition(cards, numCardsPerHand);
             var kitty = hands[0];
             hands.RemoveAt(0);

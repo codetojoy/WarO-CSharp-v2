@@ -15,7 +15,7 @@ namespace WarO_CSharp_v2
             Deck deck = new Deck(maxCard);
 
             // confirm all cards accounted for
-            var cards = deck.GetCards();
+            var cards = deck.Cards;
             var cardCounter = new TestCardCounter();
             cardCounter.AddCards(cards.ToList());
             Assert.IsTrue(cardCounter.Validate(maxCard));

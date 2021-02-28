@@ -5,6 +5,6 @@ namespace WarO_CSharp_v2
 {
     public interface IDeck
     {
-        IList<int> GetCards();
+        IList<int> Cards { get; }
     }
 }

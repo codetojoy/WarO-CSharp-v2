@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WarO_CSharp_v2
 {
@@ -31,11 +32,7 @@ namespace WarO_CSharp_v2
         public bool Validate(int maxCard)
         {
             int expectedSum = (maxCard * (maxCard + 1)) / 2;
-            // TODO: use LINQ ?
-            int actualSum = 0;
-            foreach (int c in cards) {
-                actualSum += c;
-            }
+            int actualSum = cards.Sum();
             bool result = (actualSum == expectedSum);
             return result;
         }

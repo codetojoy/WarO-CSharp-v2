@@ -39,12 +39,6 @@ Rules are [here](Rules.md).
 TODO:
 ---------
 
-* x - test coverage ?
-* x - JSON config 
-* x - parametric tests for strategies
-* x - pathological strategy
-* x - remote strategy
-    - https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
 * consider properties 
 * async, like Java
 * consider LINQ review

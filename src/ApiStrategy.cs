@@ -1,10 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
@@ -31,15 +28,17 @@ namespace WarO_CSharp_v2
         private string PRIZE_CARD_PARAM = "prize_card";
         private string MAX_CARD_PARAM = "max_card";
 
-        public string GetName() {
+        public string GetName()
+        {
             return Constants.STRATEGY_API;
         }
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard) {
-            var tmpCard = fetchSelect(prizeCard, hand, maxCard);
+        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
+        {
+            var tmpCard = FetchSelect(prizeCard, hand, maxCard);
             return hand[0];
         }
 
-        public int fetchSelect(int prizeCard, List<int> hand, int maxCard)
+        public int FetchSelect(int prizeCard, List<int> hand, int maxCard)
         {
             var result = -5150;
 

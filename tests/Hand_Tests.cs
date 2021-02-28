@@ -12,10 +12,7 @@ namespace WarO_CSharp_v2
         [SetUp]
         public void SetUp()
         {
-            List<int> cards = new List<int>();
-            cards.Add(10);
-            cards.Add(20);
-            cards.Add(30);
+            var cards = new List<int>() {10, 20, 30};
             hand = new Hand(cards);
         }
 

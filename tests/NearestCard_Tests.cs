@@ -18,10 +18,7 @@ namespace WarO_CSharp_v2
         public void SelectCard_Basic()
         {
             int prizeCard = 18;
-            List<int> hand = new List<int>();
-            hand.Add(11);
-            hand.Add(22);
-            hand.Add(33);
+            var hand = new List<int>() {11, 22, 33};
             int maxCard = 40;
 
             // test
@@ -34,10 +31,7 @@ namespace WarO_CSharp_v2
         public void SelectCard_LowBoundary()
         {
             int prizeCard = 1;
-            List<int> hand = new List<int>();
-            hand.Add(2);
-            hand.Add(27);
-            hand.Add(38);
+            var hand = new List<int>() {2, 27, 38};
             int maxCard = 40;
 
             // test
@@ -51,10 +45,7 @@ namespace WarO_CSharp_v2
         {
             int maxCard = 40;
             int prizeCard = maxCard;
-            List<int> hand = new List<int>();
-            hand.Add(10);
-            hand.Add(20);
-            hand.Add(39);
+            var hand = new List<int>() {10, 20, 39};
 
             // test
             var result = strategy.SelectCard(prizeCard, hand, maxCard);

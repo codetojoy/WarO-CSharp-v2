@@ -50,20 +50,13 @@ namespace WarO_CSharp_v2
             Console.WriteLine(msg);
         }
 
-        public List<Bid> GetBids(int prizeCard, IList<Player> players)
+        protected IList<Bid> GetBids(int prizeCard, IList<Player> players)
         {
-            var bids = new List<Bid>();
-
-            foreach (Player player in players)
-            {
-                Bid bid = player.GetBid(prizeCard);
-                bids.Add(bid);
-            }
-
+            var bids = players.Select(player => player.GetBid(prizeCard)).ToList();
             return bids;
         }
 
-        protected Bid DetermineRoundWinner(List<Bid> bids)
+        protected Bid DetermineRoundWinner(IList<Bid> bids)
         {
             Bid winningBid = null;
             int highestBid = 0;

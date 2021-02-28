@@ -9,19 +9,14 @@ namespace WarO_CSharp_v2
     {
         private static Random rng = new Random();
         private int maxCard;
-        private IList<int> cards; //  = new List<int>();
+        private IList<int> cards;
 
         public Deck(int maxCard)
         {
             this.maxCard = maxCard;
 
             this.cards = Enumerable.Range(1, maxCard).ToList();
-            /*
-            foreach (var c in Enumerable.Range(1, maxCard))
-            {
-                this.cards.Add(c);
-            }
-            */
+
             Shuffle();
         }
 

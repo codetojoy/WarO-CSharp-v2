@@ -43,8 +43,8 @@ namespace WarO_CSharp_v2
 
         private void AwardForRound(Bid winningBid)
         {
-            int prizeCard = winningBid.GetPrizeCard();
-            Player winner = winningBid.GetBidder();
+            int prizeCard = winningBid.PrizeCard;
+            Player winner = winningBid.Bidder;
             winner.WinsRound(prizeCard);
             string msg = $"{winner.GetName()} wins ROUND prize: {prizeCard}";
             Console.WriteLine(msg);
@@ -69,10 +69,10 @@ namespace WarO_CSharp_v2
             int highestBid = 0;
             foreach (Bid bid in bids)
             {
-                if (bid.GetOffer() > highestBid)
+                if (bid.Offer > highestBid)
                 {
                     winningBid = bid;
-                    highestBid = bid.GetOffer();
+                    highestBid = bid.Offer;
                 }
             }
             return winningBid;

@@ -83,7 +83,7 @@ namespace WarO_CSharp_v2
             // test
             var result = this.DetermineRoundWinner(bids);
 
-            Assert.AreEqual(Constants.TEST_PLAYER_CHOPIN, result.GetBidder().GetName());
+            Assert.AreEqual(Constants.TEST_PLAYER_CHOPIN, result.Bidder.GetName());
         }
     }
 }

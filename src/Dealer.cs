@@ -24,13 +24,6 @@ namespace WarO_CSharp_v2
                 var hand = pair.Item2;
                 player.SetHand(hand);
             }
-/*
-            for (int index = 0; index < players.Count; index++)
-            {
-                Hand hand = hands[index];
-                players[index].SetHand(hand);
-            }
-            */
 
             var table = new Table(players, kitty);
             return table;
@@ -44,15 +37,14 @@ namespace WarO_CSharp_v2
             var hand = new Hand();
             hands.Add(hand);
 
-            for (int i = 0; i < cards.Count; i++)
+            foreach (var card in cards)
             {
                 if (counter >= n) {
                     counter = 0;
                     hand = new Hand();
                     hands.Add(hand);
                 }
-                int card = cards[i];
-                hand.Add(cards[i]);
+                hand.Add(card);
                 counter++;
             }
 

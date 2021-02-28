@@ -39,6 +39,8 @@ Rules are [here](Rules.md).
 TODO:
 ---------
 
+* examine collection interfaces 
+    - https://stackoverflow.com/questions/3628425/ienumerable-vs-list-what-to-use-how-do-they-work
 * consider properties 
 * async, like Java
 * consider LINQ review

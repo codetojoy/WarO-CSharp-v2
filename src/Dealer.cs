@@ -29,23 +29,18 @@ namespace WarO_CSharp_v2
             return table;
         }
 
-        // TODO: use LINQ ? this is not elegant
-        protected List<Hand> Partition(List<int> cards, int n)
+        protected IList<Hand> Partition(List<int> cards, int n)
         {
+            var query = cards
+                            .Select((x, i) => new { x, i })
+                            .GroupBy(i => i.i / n, x => x.x)
+                            .Select(g => g.ToList())
+                            .ToList();
             var hands = new List<Hand>();
-            var counter = 0;
-            var hand = new Hand();
-            hands.Add(hand);
-
-            foreach (var card in cards)
+            foreach (var list in query)
             {
-                if (counter >= n) {
-                    counter = 0;
-                    hand = new Hand();
-                    hands.Add(hand);
-                }
-                hand.Add(card);
-                counter++;
+                var hand  = new Hand(list);
+                hands.Add(hand);
             }
 
             return hands;

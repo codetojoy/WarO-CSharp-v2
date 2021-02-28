@@ -36,7 +36,7 @@ namespace WarO_CSharp_v2
             }
 
             // test
-            List<Hand> hands = this.Partition(cards, numCardsPerHand);
+            IList<Hand> hands = this.Partition(cards, numCardsPerHand);
 
             foreach (Hand hand in hands)
             {

@@ -17,7 +17,7 @@ namespace WarO_CSharp_v2
             // confirm all cards accounted for
             var cards = deck.GetCards();
             var cardCounter = new TestCardCounter();
-            cardCounter.AddCards(cards);
+            cardCounter.AddCards(cards.ToList());
             Assert.IsTrue(cardCounter.Validate(maxCard));
 
             // confirm there was 'shuffling'

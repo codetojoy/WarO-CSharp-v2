@@ -19,7 +19,7 @@ namespace WarO_CSharp_v2
             // test
             var result = playerStats.WinsGame();
 
-            Assert.AreEqual(1, result.GetNumGamesWon());
+            Assert.AreEqual(1, result.NumGamesWon);
         }
 
         [Test]
@@ -30,8 +30,8 @@ namespace WarO_CSharp_v2
             // test
             var result = playerStats.WinsRound(prizeCard);
 
-            Assert.AreEqual(1, result.GetNumRoundsWon());
-            Assert.AreEqual(prizeCard, result.GetTotal());
+            Assert.AreEqual(1, result.NumRoundsWon);
+            Assert.AreEqual(prizeCard, result.Total);
         }
 
         [Test]
@@ -44,9 +44,9 @@ namespace WarO_CSharp_v2
             // test
             var result = playerStats.Reset();
 
-            Assert.AreEqual(1, result.GetNumGamesWon());
-            Assert.AreEqual(0, result.GetNumRoundsWon());
-            Assert.AreEqual(0, result.GetTotal());
+            Assert.AreEqual(1, result.NumGamesWon);
+            Assert.AreEqual(0, result.NumRoundsWon);
+            Assert.AreEqual(0, result.Total);
         }
     }
 }

@@ -20,17 +20,17 @@ namespace WarO_CSharp_v2
             // test
             this.PlayGame(table, isVerbose);
 
-            Assert.AreEqual(0, players[0].GetPlayerStats().GetNumGamesWon());
-            Assert.AreEqual(0, players[1].GetPlayerStats().GetNumGamesWon());
-            Assert.AreEqual(1, players[2].GetPlayerStats().GetNumGamesWon());
+            Assert.AreEqual(0, players[0].GetPlayerStats().NumGamesWon);
+            Assert.AreEqual(0, players[1].GetPlayerStats().NumGamesWon);
+            Assert.AreEqual(1, players[2].GetPlayerStats().NumGamesWon);
 
-            Assert.AreEqual(1, players[0].GetPlayerStats().GetNumRoundsWon());
-            Assert.AreEqual(1, players[1].GetPlayerStats().GetNumRoundsWon());
-            Assert.AreEqual(1, players[2].GetPlayerStats().GetNumRoundsWon());
+            Assert.AreEqual(1, players[0].GetPlayerStats().NumRoundsWon);
+            Assert.AreEqual(1, players[1].GetPlayerStats().NumRoundsWon);
+            Assert.AreEqual(1, players[2].GetPlayerStats().NumRoundsWon);
 
-            Assert.AreEqual(1, players[0].GetPlayerStats().GetTotal());
-            Assert.AreEqual(5, players[1].GetPlayerStats().GetTotal());
-            Assert.AreEqual(9, players[2].GetPlayerStats().GetTotal());
+            Assert.AreEqual(1, players[0].GetPlayerStats().Total);
+            Assert.AreEqual(5, players[1].GetPlayerStats().Total);
+            Assert.AreEqual(9, players[2].GetPlayerStats().Total);
         }
 
         [Test]
@@ -46,12 +46,12 @@ namespace WarO_CSharp_v2
             // test
             this.PlayRound(prizeCard, players);
 
-            Assert.AreEqual(0, players[0].GetPlayerStats().GetNumRoundsWon());
-            Assert.AreEqual(0, players[1].GetPlayerStats().GetNumRoundsWon());
-            Assert.AreEqual(1, players[2].GetPlayerStats().GetNumRoundsWon());
-            Assert.AreEqual(0, players[0].GetPlayerStats().GetTotal());
-            Assert.AreEqual(0, players[1].GetPlayerStats().GetTotal());
-            Assert.AreEqual(9, players[2].GetPlayerStats().GetTotal());
+            Assert.AreEqual(0, players[0].GetPlayerStats().NumRoundsWon);
+            Assert.AreEqual(0, players[1].GetPlayerStats().NumRoundsWon);
+            Assert.AreEqual(1, players[2].GetPlayerStats().NumRoundsWon);
+            Assert.AreEqual(0, players[0].GetPlayerStats().Total);
+            Assert.AreEqual(0, players[1].GetPlayerStats().Total);
+            Assert.AreEqual(9, players[2].GetPlayerStats().Total);
         }
 
         [Test]

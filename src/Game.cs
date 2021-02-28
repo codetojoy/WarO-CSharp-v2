@@ -64,7 +64,7 @@ namespace WarO_CSharp_v2
 
         protected Player DetermineGameWinner(IList<Player> players)
         {
-            Player winner = players.OrderBy(player => player.GetPlayerStats().GetTotal()).Last();
+            Player winner = players.OrderBy(player => player.GetPlayerStats().Total).Last();
             return winner;
         }
     }

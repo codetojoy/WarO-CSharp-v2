@@ -30,12 +30,11 @@ namespace WarO_CSharp_v2
         }
 
         public PlayerStats GetPlayerStats() { return playerStats; }
-        public int GetNumGamesWon() { return playerStats.GetNumGamesWon(); }
-        public int GetTotal() { return playerStats.GetTotal(); }
+        public int GetNumGamesWon() { return playerStats.NumGamesWon; }
+        public int GetTotal() { return playerStats.Total; }
         public String GetName() { return name; }
 
         public Bid GetBid(int prizeCard) {
-            // TODO: ensure that offer is contained in hand ! (no cheaters)
             int offer = strategy.SelectCard(prizeCard, hand.GetCards(), maxCard);
             hand = hand.Select(offer);
 

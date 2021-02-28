@@ -6,7 +6,7 @@ namespace WarO_CSharp_v2
     public class TestDeck : IDeck
     {
         public const int CASE_1 = 1;
-        private List<int> cards = new List<int>();
+        private IList<int> cards = new List<int>();
 
         public TestDeck(int whichCase)
         {
@@ -34,12 +34,12 @@ namespace WarO_CSharp_v2
             this.cards = cards;
         }
 
-        public TestDeck(List<int> cards)
+        public TestDeck(IList<int> cards)
         {
             this.cards = cards;
         }
 
-        public List<int> GetCards()
+        public IList<int> GetCards()
         {
             return cards;
         }

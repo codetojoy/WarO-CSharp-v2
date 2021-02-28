@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WarO_CSharp_v2
 {
@@ -8,18 +9,23 @@ namespace WarO_CSharp_v2
     {
         private static Random rng = new Random();
         private int maxCard;
-        private List<int> cards = new List<int>();
+        private IList<int> cards; //  = new List<int>();
 
         public Deck(int maxCard)
         {
             this.maxCard = maxCard;
-            for (int i = 1; i <= maxCard; i++) {
-                this.cards.Add(i);
+
+            this.cards = Enumerable.Range(1, maxCard).ToList();
+            /*
+            foreach (var c in Enumerable.Range(1, maxCard))
+            {
+                this.cards.Add(c);
             }
+            */
             Shuffle();
         }
 
-        public List<int> GetCards()
+        public IList<int> GetCards()
         {
             return cards;
         }

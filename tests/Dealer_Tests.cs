@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WarO_CSharp_v2
 {
@@ -29,7 +29,8 @@ namespace WarO_CSharp_v2
             var cards = new List<int>();
             var expectedSum = 0;
             var actualSum = 0;
-            for (int i = 1; i <= numCards; i++)
+
+            foreach (var i in Enumerable.Range(1, numCards))
             {
                 cards.Add(i);
                 expectedSum += i;

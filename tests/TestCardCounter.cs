@@ -5,7 +5,7 @@ namespace WarO_CSharp_v2
 {
     public class TestCardCounter
     {
-        List<int> cards = new List<int>();
+        IList<int> cards = new List<int>();
 
         protected void AddCards(Hand hand) {
             AddCards(hand.GetCards());
@@ -16,8 +16,11 @@ namespace WarO_CSharp_v2
             AddCards(table.GetPlayers());
         }
 
-        public void AddCards(List<int> list) {
-            this.cards.AddRange(list);
+        public void AddCards(IList<int> list) {
+            foreach (var card in list)
+            {
+                this.cards.Add(card);
+            }
         }
         protected void AddCards(IList<Player> players) {
             foreach (Player player in players)

@@ -1,6 +1,5 @@
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace WarO_CSharp_v2
 {
@@ -25,7 +24,7 @@ namespace WarO_CSharp_v2
             int numMatches = 0;
             int maxNumMatches = maxCard / 4;
 
-            for (int i = 0; i < maxCard; i++)
+            foreach (var i in Enumerable.Range(1, maxCard - 1))
             {
                 int originalValue = i+1;
                 if (cards[i] == originalValue)

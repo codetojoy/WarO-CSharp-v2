@@ -29,7 +29,7 @@ namespace WarO_CSharp_v2
             return table;
         }
 
-        protected IList<Hand> Partition(List<int> cards, int n)
+        protected IList<Hand> Partition(IEnumerable<int> cards, int n)
         {
             var query = cards
                             .Select((x, i) => new { x, i })

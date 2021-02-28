@@ -9,7 +9,7 @@ namespace WarO_CSharp_v2
         {
             return Constants.STRATEGY_CONSOLE;
         }
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
+        public int SelectCard(int prizeCard, IList<int> hand, int maxCard)
         {
             bool isDone = false;
             string input = "";
@@ -40,7 +40,7 @@ namespace WarO_CSharp_v2
             }
         }
 
-        private bool IsValid(string input, List<int> hand)
+        private bool IsValid(string input, IList<int> hand)
         {
             bool result = false;
 

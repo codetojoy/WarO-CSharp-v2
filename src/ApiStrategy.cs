@@ -33,7 +33,7 @@ namespace WarO_CSharp_v2
             return Constants.STRATEGY_API;
         }
 
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
+        public int SelectCard(int prizeCard, IList<int> hand, int maxCard)
         {
             var result = -5150;
 

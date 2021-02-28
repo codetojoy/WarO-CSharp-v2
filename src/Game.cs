@@ -15,8 +15,8 @@ namespace WarO_CSharp_v2
             {
                 if (isVerbose)
                 {
-                    Console.WriteLine("round: " + roundIndex);
-                    Console.WriteLine(table.ToString());
+                    Logger.Log("round: " + roundIndex);
+                    Logger.Log(table.ToString());
                 }
                 int prizeCard = table.GetPrizeCard();
                 PlayRound(prizeCard, players);

@@ -9,7 +9,7 @@ namespace WarO_CSharp_v2
         public string GetName() {
             return Constants.STRATEGY_NEAREST;
         }
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard) {
+        public int SelectCard(int prizeCard, IList<int> hand, int maxCard) {
             return hand.Aggregate(maxCard * 10, (acc, card) => Math.Abs(card - prizeCard) < Math.Abs(acc - prizeCard) ? card : acc);
         }
     }

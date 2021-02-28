@@ -8,7 +8,7 @@ namespace WarO_CSharp_v2
         public virtual string GetName() {
             return Constants.STRATEGY_NEXT;
         }
-        public virtual int SelectCard(int prizeCard, List<int> hand, int maxCard) {
+        public virtual int SelectCard(int prizeCard, IList<int> hand, int maxCard) {
             return hand[0];
         }
     }

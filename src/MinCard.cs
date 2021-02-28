@@ -9,7 +9,7 @@ namespace WarO_CSharp_v2
         public string GetName() {
             return Constants.STRATEGY_MIN;
         }
-       public int SelectCard(int prizeCard, List<int> hand, int maxCard) {
+       public int SelectCard(int prizeCard, IList<int> hand, int maxCard) {
            return hand.Min(i => i);
        }
     }

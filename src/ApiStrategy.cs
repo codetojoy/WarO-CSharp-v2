@@ -66,7 +66,7 @@ namespace WarO_CSharp_v2
                 var serializer = new JsonSerializer();
                 var apiResult = (ApiResult) serializer.Deserialize(textReader, typeof(ApiResult));
                 result = apiResult.Card;
-                Console.WriteLine($"TRACER ApiStrategy card: {result} msg: {apiResult.Message}");
+                Logger.Log($"ApiStrategy card: {result} msg: {apiResult.Message}");
             }
             else
             {

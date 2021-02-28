@@ -1,5 +1,7 @@
 
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WarO_CSharp_v2
 {
@@ -7,22 +9,30 @@ namespace WarO_CSharp_v2
     {
         public Table Deal(IConfig config, IDeck deck)
         {
-            List<Player> players = config.GetPlayers();
-            int maxCard = config.GetMaxCard();
-            int numCardsPerHand = config.GetNumCardsPerHand();
+            var players = config.GetPlayers();
+            var maxCard = config.GetMaxCard();
+            var numCardsPerHand = config.GetNumCardsPerHand();
 
-            List<int> cards = deck.GetCards();
-            List<Hand> hands = Partition(cards, numCardsPerHand);
-            Hand kitty = hands[0];
+            var cards = deck.GetCards();
+            var hands = Partition(cards, numCardsPerHand);
+            var kitty = hands[0];
             hands.RemoveAt(0);
 
+            foreach (var pair in players.Zip(hands, Tuple.Create))
+            {
+                var player = pair.Item1;
+                var hand = pair.Item2;
+                player.SetHand(hand);
+            }
+/*
             for (int index = 0; index < players.Count; index++)
             {
                 Hand hand = hands[index];
                 players[index].SetHand(hand);
             }
+            */
 
-            Table table = new Table(players, kitty);
+            var table = new Table(players, kitty);
             return table;
         }
 

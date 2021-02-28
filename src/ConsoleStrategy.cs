@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace WarO_CSharp_v2
 {
     public class ConsoleStrategy : IStrategy
     {
-        public string GetName() {
+        public string GetName()
+        {
             return Constants.STRATEGY_CONSOLE;
         }
-        public int SelectCard(int prizeCard, List<int> hand, int maxCard) {
+        public int SelectCard(int prizeCard, List<int> hand, int maxCard)
+        {
             bool isDone = false;
             string input = "";
 

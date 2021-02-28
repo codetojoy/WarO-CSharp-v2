@@ -19,7 +19,7 @@ namespace WarO_CSharp_v2
         public void AddCards(List<int> list) {
             this.cards.AddRange(list);
         }
-        protected void AddCards(List<Player> players) {
+        protected void AddCards(IList<Player> players) {
             foreach (Player player in players)
             {
                 AddCards(player.GetCards());

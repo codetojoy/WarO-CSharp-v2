@@ -67,7 +67,7 @@ namespace WarO_CSharp_v2
         {
             return config.NumCards;
         }
-        public List<Player> GetPlayers()
+        public IList<Player> GetPlayers()
         {
             List<Player> players = new List<Player>();
             var maxCard = config.NumCards;

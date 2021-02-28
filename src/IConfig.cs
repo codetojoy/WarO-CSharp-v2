@@ -1,5 +1,4 @@
 
-using System;
 using System.Collections.Generic;
 
 namespace WarO_CSharp_v2
@@ -9,6 +8,6 @@ namespace WarO_CSharp_v2
         bool IsVerbose();
         int GetNumCardsPerHand();
         int GetMaxCard();
-        List<Player> GetPlayers();
+        IList<Player> GetPlayers();
     }
 }

@@ -5,15 +5,15 @@ namespace WarO_CSharp_v2
 {
     public class Table
     {
-        private List<Player> players;
+        private IList<Player> players;
         private Hand kitty;
 
-        public Table(List<Player> players, Hand kitty) {
+        public Table(IList<Player> players, Hand kitty) {
             this.players = players;
             this.kitty = kitty;
         }
 
-        public List<Player> GetPlayers() { return players; }
+        public IList<Player> GetPlayers() { return players; }
         public Hand GetKitty() { return kitty; }
 
         public bool HasPrizeCard() {

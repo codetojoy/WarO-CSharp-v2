@@ -29,7 +29,7 @@ namespace WarO_CSharp_v2
             Console.WriteLine(table.ToString());
         }
 
-        protected void PlayRound(int prizeCard, List<Player> players)
+        protected void PlayRound(int prizeCard, IList<Player> players)
         {
             var bids = GetBids(prizeCard, players);
             var winningBid = DetermineRoundWinner(bids);
@@ -50,7 +50,7 @@ namespace WarO_CSharp_v2
             Console.WriteLine(msg);
         }
 
-        public List<Bid> GetBids(int prizeCard, List<Player> players)
+        public List<Bid> GetBids(int prizeCard, IList<Player> players)
         {
             var bids = new List<Bid>();
 
@@ -78,7 +78,7 @@ namespace WarO_CSharp_v2
             return winningBid;
         }
 
-        public Player DetermineGameWinner(List<Player> players)
+        public Player DetermineGameWinner(IList<Player> players)
         {
             Player winner = null;
             int highestTotal = 0;

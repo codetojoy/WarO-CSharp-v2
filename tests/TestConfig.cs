@@ -24,7 +24,7 @@ namespace WarO_CSharp_v2
         {
             return maxCard;
         }
-        public List<Player> GetPlayers()
+        public IList<Player> GetPlayers()
         {
             List<Player> players = new List<Player>();
 

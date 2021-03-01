@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Strategy
 {
     public class Strategies
     {

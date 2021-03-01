@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
+using WarO_CSharp_v2.Strategy;
+
 namespace WarO_CSharp_v2
 {
     class JsonDataPlayer

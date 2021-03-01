@@ -39,15 +39,15 @@ Rules are [here](Rules.md).
 TODO:
 ---------
 
+* move code into folders, possibly namespaces
 * examine collection interfaces 
     - https://stackoverflow.com/questions/3628425/ienumerable-vs-list-what-to-use-how-do-they-work
 * consider Table being an IEnumerable
-* consider properties 
+* x - consider properties 
+* x - consider LINQ review
 * async, like Java
-* consider LINQ review
 * fix bug about # of games
 * consider immutability
 * validator during game, capture discards 
 * format code appropriately
-* move code into folders, possibly namespaces
 * write a remote API server 

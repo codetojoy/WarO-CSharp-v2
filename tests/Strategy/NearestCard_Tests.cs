@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Strategy
 {
     [TestFixture]
     public class NearestCard_Tests

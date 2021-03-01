@@ -5,7 +5,7 @@ using System.Net.Http;
 
 using Newtonsoft.Json;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Strategy
 {
    class ApiResult
     {

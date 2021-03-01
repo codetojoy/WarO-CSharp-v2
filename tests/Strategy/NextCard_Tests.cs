@@ -1,17 +1,17 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Strategy
 {
     [TestFixture]
-    public class MaxCard_Tests
+    public class NextCard_Tests
     {
         private IStrategy strategy;
 
         [SetUp]
         public void SetUp()
         {
-            strategy = new MaxCard();
+            strategy = new NextCard();
         }
 
         [Test]
@@ -24,7 +24,7 @@ namespace WarO_CSharp_v2
             // test
             var result = strategy.SelectCard(prizeCard, hand, maxCard);
 
-            Assert.AreEqual(33, result);
+            Assert.AreEqual(11, result);
         }
     }
 }

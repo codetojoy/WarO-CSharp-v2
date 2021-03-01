@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Strategy
 {
     public class MinCard : IStrategy
     {

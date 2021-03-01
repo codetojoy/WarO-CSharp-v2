@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Actor
 {
     [TestFixture]
     public class Hand_Tests

@@ -4,7 +4,7 @@ using System.Linq;
 
 using WarO_CSharp_v2.Actor;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     public class Game
     {

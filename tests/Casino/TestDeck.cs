@@ -1,7 +1,7 @@
 
 using System.Collections.Generic;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     public class TestDeck : IDeck
     {

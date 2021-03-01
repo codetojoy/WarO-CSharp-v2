@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Linq;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     [TestFixture]
     public class Deck_Tests

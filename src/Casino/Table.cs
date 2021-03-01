@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using WarO_CSharp_v2.Actor;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     public class Table
     {

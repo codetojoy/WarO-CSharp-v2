@@ -2,9 +2,10 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
+using WarO_CSharp_v2.Actor;
 using WarO_CSharp_v2.Config;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     [TestFixture]
     public class Dealer_Tests : Dealer

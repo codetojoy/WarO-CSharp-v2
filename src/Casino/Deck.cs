@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Casino
 {
     public class Deck : IDeck
     {

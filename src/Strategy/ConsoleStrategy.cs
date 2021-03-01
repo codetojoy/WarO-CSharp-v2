@@ -7,7 +7,7 @@ namespace WarO_CSharp_v2.Strategy
     {
         public string GetName()
         {
-            return Constants.STRATEGY_CONSOLE;
+            return StrategyConstants.STRATEGY_CONSOLE;
         }
         public int SelectCard(int prizeCard, IList<int> hand, int maxCard)
         {

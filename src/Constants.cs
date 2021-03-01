@@ -8,14 +8,6 @@ namespace WarO_CSharp_v2
         public const string CMD_FORCE_QUIT = "q!";
         public const string CMD_QUIT = "q";
 
-        public const string STRATEGY_API = "api";
-        public const string STRATEGY_CONSOLE = "console";
-        public const string STRATEGY_MAX = "max";
-        public const string STRATEGY_MIN = "min";
-        public const string STRATEGY_NEAREST = "nearest";
-        public const string STRATEGY_NEXT = "next";
-        public const string STRATEGY_PATHOLOGICAL = "pathological";
-
         public const string TEST_PLAYER_BRAHMS = "Brahms";
         public const string TEST_PLAYER_CHOPIN = "Chopin";
         public const string TEST_PLAYER_MOZART = "Mozart";

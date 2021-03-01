@@ -10,25 +10,25 @@ namespace WarO_CSharp_v2.Strategy
 
             switch (name.Trim().ToLower())
             {
-                case Constants.STRATEGY_API:
+                case StrategyConstants.STRATEGY_API:
                     strategy = new ApiStrategy();
                     break;
-                case Constants.STRATEGY_CONSOLE:
+                case StrategyConstants.STRATEGY_CONSOLE:
                     strategy = new ConsoleStrategy();
                     break;
-                case Constants.STRATEGY_MAX:
+                case StrategyConstants.STRATEGY_MAX:
                     strategy = new MaxCard();
                     break;
-                case Constants.STRATEGY_MIN:
+                case StrategyConstants.STRATEGY_MIN:
                     strategy = new MinCard();
                     break;
-                case Constants.STRATEGY_NEAREST:
+                case StrategyConstants.STRATEGY_NEAREST:
                     strategy = new NearestCard();
                     break;
-                case Constants.STRATEGY_NEXT:
+                case StrategyConstants.STRATEGY_NEXT:
                     strategy = new NextCard();
                     break;
-                case Constants.STRATEGY_PATHOLOGICAL:
+                case StrategyConstants.STRATEGY_PATHOLOGICAL:
                     strategy = new PathologicalPauseStrategy();
                     break;
                 default:

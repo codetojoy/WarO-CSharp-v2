@@ -1,5 +1,5 @@
 ﻿
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Actor
 {
     public class Bid
     {

@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 
+using WarO_CSharp_v2.Actor;
 using WarO_CSharp_v2.Strategy;
 
 namespace WarO_CSharp_v2.Config

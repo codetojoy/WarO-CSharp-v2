@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using WarO_CSharp_v2.Actor;
+
 namespace WarO_CSharp_v2
 {
     public class TestCardCounter

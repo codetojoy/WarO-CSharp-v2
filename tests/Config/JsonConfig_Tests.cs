@@ -2,6 +2,8 @@ using NUnit.Framework;
 using System.IO;
 using System.Collections.Generic;
 
+using WarO_CSharp_v2.Config;
+
 namespace WarO_CSharp_v2
 {
     [TestFixture]

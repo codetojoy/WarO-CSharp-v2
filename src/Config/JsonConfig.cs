@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 using WarO_CSharp_v2.Strategy;
 
-namespace WarO_CSharp_v2
+namespace WarO_CSharp_v2.Config
 {
     class JsonDataPlayer
     {

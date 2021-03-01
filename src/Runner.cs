@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using WarO_CSharp_v2.Config;
+
 namespace WarO_CSharp_v2
 {
     public class Runner

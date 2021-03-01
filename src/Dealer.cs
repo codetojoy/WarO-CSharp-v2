@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using WarO_CSharp_v2.Config;
+
 namespace WarO_CSharp_v2
 {
     public class Dealer
